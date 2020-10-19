@@ -14527,7 +14527,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>D) Pick some number of days N, and assume you saw Y * N gamma rays from your source. Calculate the 'sigma' of your observation. (In reality the number of gamma-rays seen from a source will also fluctuate, but we're going to ignore that complication for a couple of labs.)</p>
-<p>Choose N to be 20 days. Y, chosen from earlier, is 5. Mu (X) is 1.</p>
+<p>Choose N to be 25 days. Y, chosen from earlier, is 5. Mu (X) is 1.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14842,12 +14842,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sig10k</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">*</span> <span class="mi">1000</span>
-<span class="n">bright</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">g1</span><span class="p">)</span>
-<span class="n">prob</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">bright</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">prob</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">sig10k</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="n">sig</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">prob</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The significance is:&quot;</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
 </pre></div>
@@ -14869,7 +14868,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The significance is: 0.0028720328250620305
+<pre>The significance is: 3700.0
 </pre>
 </div>
 </div>
@@ -14881,7 +14880,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This sigma value is much lower than 5-sigma value, which means it's not statistically significant. There is a very low chance of detecting a signal in 10K pixels. This makes sense because there is a large region to measure and it's unlikely that this region is where the signal was observed.</p>
+<p>This sigma value is much higher than 5-sigma value, which means it's statistically significant. There is a very high chance of detecting a signal in 10K pixels. This makes sense because there is a large region to measure and it's very likely that in a region this large, a signal was observed.</p>
 
 </div>
 </div>
@@ -14900,19 +14899,17 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prob5</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">normdist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">((</span><span class="n">g1</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">normdist</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob5</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="n">compare</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">norm</span> <span class="o">&gt;</span> <span class="n">nprob</span><span class="p">)</span>
-<span class="n">sig1</span> <span class="o">=</span> <span class="n">compare</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sig1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sig1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14932,10 +14929,50 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>(array([13209, 13210, 13211, ..., 23788, 23789, 23790], dtype=int64),)
+<pre>4980
 </pre>
 </div>
 </div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For Version 1, the signal required for a 5-sigma detection will be in around the 1000x order of magnitude of signal counts.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>B) Calculate the signal required for a 5-sigma detection in Version 2</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">g1</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">g1</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob5</span><span class="p">))</span>
+
+<span class="n">sig1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sig1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
@@ -14943,16 +14980,9 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-40-b351c9d4d846&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      8</span> 
-<span class="ansi-green-fg">      9</span> compare <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>where<span class="ansi-yellow-intense-fg ansi-bold">(</span>norm <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> nprob<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 10</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>sig1 <span class="ansi-yellow-intense-fg ansi-bold">=</span> compare<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;tuple&#39; object is not callable</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>10582
+</pre>
 </div>
 </div>
 
@@ -14963,14 +14993,14 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>B) Calculate the signal required for a 5-sigma detection in Version 2</p>
+<p>For Version 2, the signal required for a 5-sigma detection will be around the 10,000x order of magnitude of signal counts.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>C) Discuss how much brighter the signal must be for discovery if you have a trials factor of 10k. Looking at your probability distributions, explain why the sensitivity penalty due to a trials factor is so low.</p>
-<p>If the trials factor is 10k, the signal must be</p>
+<p>If the trials factor is 10k, the signal must be an entire order of magnitude brighter to be significant. The sensitivity penalty due to a trials factor is so low because of the look-elsewhere effect. This means that that it's very important to know where to look for the signal because the size of space could be too great to measure and be confident that a signal did indeed arise in the region and not because of chance.</p>
 
 </div>
 </div>
