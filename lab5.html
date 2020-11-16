@@ -14264,10 +14264,32 @@ a.anchor-link {
 <p>PHYS 434 AA Lab 5</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The data was taken by the ATLAS detector at the Large Hadron Collider in proton–proton (pp) collision runs at a center-of-mass energy √s = 13 TeV. There were several Monte Carlo (MC) simulated event samples were used for the optimisation of the Higgs boson tagger, estimation of its performance, and the comparisons between data and simulation. All this was to study the techniques for identifying Higgs boson at high transverse momenta decaying into bottom-quark pairs, H → bb¯.</p>
+<p>Each of the labels is one of 14 different features. 
+'pt' are particles with tranverse momenta.
+'eta' is the angle of a particle relative to the beam axis.
+'phi' is the azimuthal angle around the z-axis.
+'mass' is the mass of the jet.
+'ee2' is the energy correlation ratio of the 0-point and 1-point energy correlation function for a jet J. 
+'ee3' is the energy correlation ratio of the 2-point and 3-point energy correlation function for a jet J.
+'d2' is an energy correlation ratio.
+'angularity' is the angularity.
+'t1' is a form of 1-subjettiness.
+'t2' is a form of 2-subjettiness.
+'t3' is a form of 3-subjettiness.
+'t21' is corresponding ratio for a form of 2-subjettiness.
+'t32' is corresponding ratio for a form of 2-subjettiness.
+'KtDeltaR' corresponds to deltaR of two subjets within the large-R jet.</p>
+<p>The first plots show the signal of each feature plotted against its corresponding background. It can be seen that most of the features have discrimination power, but some do not, as they mostly overlap and the signal and background are not significantly distinct from each other. The features that are do not provide discrimination power are eta, phi, angularity, and t32.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -14307,7 +14329,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
 
 
 
@@ -14343,7 +14365,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># background data</span>
@@ -14643,14 +14665,14 @@ a.anchor-link {
 <p>1.Do all features provide discrimination power between signal and background?</p>
 <p>Most of the features provide discrimination power because when the signal of each feature was plotted on to its corresponding background, there is a distinct and significant difference between the two. The features that don't provide discrimination power are eta, phi, angularity, and t32. These overlap a great amount and don't provide discrimination power between the signal and the background.</p>
 <p>2.Are there correlations among these features?</p>
-<p>There are correlations among these features. For example, t1, t2, and t3 are related to t21 and t32 because the latter are ratios of the former.</p>
+<p>There are correlations among these features. For example, t1, t2, and t3 are related to t21 and t32 because the latter are ratios of the former. There are also correlations between d2 and the energy ratios, as well as between mass, momentum and angularity.</p>
 <p>3.Compute expected discovery sensitivity by normalizing each sample appropriately.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">norm_bgpt</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">normalize</span><span class="p">([</span><span class="n">bgpt</span><span class="p">])</span>
@@ -14708,24 +14730,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>4.Develop a plan to optimize the discovery sensitivity by applying selections to these features.
-To optimize the discovery sensitivity,</p>
-<p>The data was taken by the ATLAS detector at the Large Hadron Collider in proton–proton (pp) collision runs at a center-of-mass energy √s = 13 TeV. There were several Monte Carlo (MC) simulated event samples were used for the optimisation of the Higgs boson tagger, estimation of its performance, and the comparisons between data and simulation. All this was to study the techniques for identifying Higgs boson at high transverse momenta decaying into bottom-quark pairs, H → bb¯.</p>
-<p>Each of the labels is one of 14 different features. 
-'pt' are particles with tranverse momenta.
-'eta' is the angle of a particle relative to the beam axis.
-'phi' is the azimuthal angle around the z-axis.
-'mass' is the mass of the jet.
-'ee2' is the energy correlation ratio of the 0-point and 1-point energy correlation function for a jet J. 
-'ee3' is the energy correlation ratio of the 2-point and 3-point energy correlation function for a jet J.
-'d2' is an energy correlation ratio.
-'angularity' is the angularity.
-'t1' is a form of 1-subjettiness.
-'t2' is a form of 2-subjettiness.
-'t3' is a form of 3-subjettiness.
-'t21' is corresponding ratio for a form of 2-subjettiness.
-'t32' is corresponding ratio for a form of 2-subjettiness.
-'KtDeltaR' corresponds to deltaR of two subjets within the large-R jet.</p>
-<p>The first plots show the signal of each feature plotted against its corresponding background. It can be seen that most of the features have discrimination power, but some do not, as they mostly overlap and the signal and background are not significantly distinct from each other. The features that are do not provide discrimination power are eta, phi, angularity, and t32.</p>
+To optimize the discovery sensitivity, we need to find a moment in the signal data that has a very small chance of being caused by the background data. To do this, we need to compare the background data with the signal data to see if there is a significant enough difference between the datasets that could have produced the signal distribution.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
