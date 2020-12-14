@@ -14058,8 +14058,8 @@ After event selection significance:  1.757253376125739
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">histo</span><span class="p">(</span><span class="n">bg</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">lumi</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bg</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;background&#39;</span><span class="p">)</span>                          <span class="c1"># expected mass background</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;signal&#39;</span><span class="p">)</span>                <span class="c1"># expected mass signal</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bg</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;background&#39;</span><span class="p">)</span>                     <span class="c1"># expected mass background</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;signal&#39;</span><span class="p">)</span>           <span class="c1"># expected mass signal</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">lumi</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;high luminosity&#39;</span><span class="p">)</span> <span class="c1">#observed mass data</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
@@ -14725,7 +14725,7 @@ The observed significance: 0.09311283477587823
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>3)95% Confidence Level of signal yields</p>
 <ul>
-<li>In the low luminosity data, the observed significance is less than 5$σ$. We will calculate the 95% confidence level upper limit of signal yield.</li>
+<li>In the low luminosity data, the observed significance is less than 5σ. We will calculate the 95% confidence level upper limit of signal yield.</li>
 <li>Evaluate the expected 95% confidence level upper limit</li>
 <li>Evaluate the observed 95% confidence level upper limit</li>
 <li>Compare expectation to observation. Comment on your finding.</li>
@@ -14781,7 +14781,7 @@ The observed upper 5σ sensitivity threshold is 18.0
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The expected 5σ sensitivity limit is less than the observed 5σ sensitivity limit. This makes sense because the mean of the epxected significance is greater than that of the observed significance.</p>
+<p>The expected 5σ sensitivity limit is less than the observed 5σ sensitivity limit. This makes sense because the mean of the expected significance is greater than that of the observed significance.</p>
 
 </div>
 </div>
@@ -14791,7 +14791,7 @@ The observed upper 5σ sensitivity threshold is 18.0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>4)Bonus:</p>
 <ul>
-<li>Evalute the 1$σ$ uncertainty of the expected 95% confidence level upper limit.</li>
+<li>Evaluate the 1σ uncertainty of the expected 95% confidence level upper limit.</li>
 </ul>
 
 </div>
