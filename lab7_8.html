@@ -13283,7 +13283,7 @@ The expected yield:       0.7071067811865475
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[346]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
@@ -13355,7 +13355,7 @@ The expected yield:       0.7071067811865475
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[347]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cutbg</span> <span class="o">=</span> <span class="n">find_nearest</span><span class="p">(</span><span class="n">s_bgmass</span><span class="p">,</span> <span class="mi">132</span><span class="p">)</span>
@@ -13416,7 +13416,7 @@ The expected yield:       0.7071067811865475
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[348]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cutbg</span> <span class="o">=</span> <span class="n">find_nearest</span><span class="p">(</span><span class="n">s_bgmass</span><span class="p">,</span> <span class="mf">127.81</span><span class="p">)</span>
@@ -14000,6 +14000,14 @@ After event selection significance:  1.757253376125739
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using the optimized event selection from Lab 7, now hunt for your signal by using the low PT psuedo-experiment dataset. For each task below, choose one of the observed data from your specific pT sample to perform the analysis.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[73]:</div>
@@ -14031,7 +14039,7 @@ After event selection significance:  1.757253376125739
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[306]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">highmass</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">high</span><span class="p">[:,</span><span class="mi">3</span><span class="p">])</span>
@@ -14046,7 +14054,7 @@ After event selection significance:  1.757253376125739
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="prompt input_prompt">In&nbsp;[239]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">histo</span><span class="p">(</span><span class="n">bg</span><span class="p">,</span> <span class="n">sig</span><span class="p">,</span> <span class="n">lumi</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">):</span>
@@ -14060,11 +14068,6 @@ After event selection significance:  1.757253376125739
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    
-<span class="k">def</span> <span class="nf">norm</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
-    <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
-    <span class="n">normal_array</span> <span class="o">=</span> <span class="n">array</span> <span class="o">/</span> <span class="n">norm</span>
-    <span class="k">return</span> <span class="n">normal_array</span>
 </pre></div>
 
     </div>
@@ -14074,7 +14077,7 @@ After event selection significance:  1.757253376125739
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[217]:</div>
+<div class="prompt input_prompt">In&nbsp;[429]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># MASS</span>
@@ -14098,6 +14101,24 @@ After event selection significance:  1.757253376125739
 <span class="n">histo</span><span class="p">(</span><span class="n">newbg</span><span class="p">,</span> <span class="n">newsig</span><span class="p">,</span> <span class="n">newhigh</span><span class="p">,</span> <span class="s2">&quot;Observed High Mass Luminosity w/ Expected Signal and Background (Optimal event selection)&quot;</span><span class="p">,</span> <span class="s2">&quot;mass&quot;</span><span class="p">)</span>
 
 <span class="c1"># observed significance</span>
+<span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">qcd</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">hightotal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">newhigh</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="c1"># expected yield</span>
+<span class="n">exp_yield</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">qcd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected yield:       &quot;</span><span class="p">,</span> <span class="n">exp_yield</span><span class="p">)</span>
+
+<span class="c1"># observed yield</span>
+<span class="n">percentbg</span> <span class="o">=</span> <span class="n">qcd</span> <span class="o">/</span> <span class="n">total</span>
+<span class="n">percentsig</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">total</span>
+
+<span class="n">lumibg</span> <span class="o">=</span> <span class="n">percentbg</span> <span class="o">*</span> <span class="n">hightotal</span>
+<span class="n">lumisig</span> <span class="o">=</span> <span class="n">percentsig</span> <span class="o">*</span> <span class="n">hightotal</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">lumisig</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lumibg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The observed significance:&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14138,13 +14159,25 @@ After event selection significance:  1.757253376125739
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The expected yield:        0.7071067811865475
+The observed significance: 0.06058052492344383
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
+<div class="prompt input_prompt">In&nbsp;[430]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># t3</span>
@@ -14168,6 +14201,24 @@ After event selection significance:  1.757253376125739
 <span class="n">histo</span><span class="p">(</span><span class="n">newbg</span><span class="p">,</span> <span class="n">newsig</span><span class="p">,</span> <span class="n">newhigh</span><span class="p">,</span> <span class="s2">&quot;Observed High T3 Luminosity w/ Expected Signal and Background (Optimal event selection)&quot;</span><span class="p">,</span> <span class="s2">&quot;t3&quot;</span><span class="p">)</span>
 
 <span class="c1"># observed significance</span>
+<span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">qcd</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">hightotal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">newhigh</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="c1"># expected yield</span>
+<span class="n">exp_yield</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">qcd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected yield:       &quot;</span><span class="p">,</span> <span class="n">exp_yield</span><span class="p">)</span>
+
+<span class="c1"># observed yield</span>
+<span class="n">percentbg</span> <span class="o">=</span> <span class="n">qcd</span> <span class="o">/</span> <span class="n">total</span>
+<span class="n">percentsig</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">total</span>
+
+<span class="n">lumibg</span> <span class="o">=</span> <span class="n">percentbg</span> <span class="o">*</span> <span class="n">hightotal</span>
+<span class="n">lumisig</span> <span class="o">=</span> <span class="n">percentsig</span> <span class="o">*</span> <span class="n">hightotal</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">lumisig</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lumibg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The observed significance:&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14208,13 +14259,25 @@ After event selection significance:  1.757253376125739
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The expected yield:        0.7071067811865475
+The observed significance: 0.0775886589650833
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[218]:</div>
+<div class="prompt input_prompt">In&nbsp;[431]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># t21</span>
@@ -14238,6 +14301,24 @@ After event selection significance:  1.757253376125739
 <span class="n">histo</span><span class="p">(</span><span class="n">newbg</span><span class="p">,</span> <span class="n">newsig</span><span class="p">,</span> <span class="n">newhigh</span><span class="p">,</span> <span class="s2">&quot;Observed High T21 Luminosity w/ Expected Signal and Background (Optimal event selection)&quot;</span><span class="p">,</span> <span class="s2">&quot;t21&quot;</span><span class="p">)</span>
 
 <span class="c1"># observed significance</span>
+<span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">qcd</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">hightotal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">newhigh</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="c1"># expected yield</span>
+<span class="n">exp_yield</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">qcd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected yield:       &quot;</span><span class="p">,</span> <span class="n">exp_yield</span><span class="p">)</span>
+
+<span class="c1"># observed yield</span>
+<span class="n">percentbg</span> <span class="o">=</span> <span class="n">qcd</span> <span class="o">/</span> <span class="n">total</span>
+<span class="n">percentsig</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">total</span>
+
+<span class="n">lumibg</span> <span class="o">=</span> <span class="n">percentbg</span> <span class="o">*</span> <span class="n">hightotal</span>
+<span class="n">lumisig</span> <span class="o">=</span> <span class="n">percentsig</span> <span class="o">*</span> <span class="n">hightotal</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">lumisig</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lumibg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The observed significance:&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14278,45 +14359,14 @@ After event selection significance:  1.757253376125739
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">qcd</span> <span class="o">=</span> <span class="mi">20000</span>
-<span class="n">highlumi</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">highmass</span><span class="p">)</span>
-
-<span class="c1"># expected yield</span>
-<span class="n">exp_yield</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">qcd</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected yield:        &quot;</span><span class="p">,</span> <span class="n">exp_yield</span><span class="p">)</span>
-
-<span class="c1"># observed significance</span>
-<span class="c1">#prob = stats.poisson.cdf(, exp_yield * highlumi)</span>
-
-<span class="c1">#sigma = stats.norm.ppf(prob)</span>
-<span class="c1">#print(&quot;The observed significance:&quot;, sigma)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
 <div class="output_area">
 
     <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The expected yield:         0.7071067811865475
+<pre>The expected yield:        0.7071067811865475
+The observed significance: 0.09311283477587823
 </pre>
 </div>
 </div>
@@ -14324,6 +14374,14 @@ After event selection significance:  1.757253376125739
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In all three features, the observed significance is lower than the expected yield. This is because the high luminosity mass data does not closely follow the signal data and the background data. This difference results in a much lower significance. Ideally, the significances should be the same.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14341,7 +14399,7 @@ After event selection significance:  1.757253376125739
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="prompt input_prompt">In&nbsp;[308]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lowmass</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">low</span><span class="p">[:,</span><span class="mi">3</span><span class="p">])</span>
@@ -14356,7 +14414,7 @@ After event selection significance:  1.757253376125739
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[225]:</div>
+<div class="prompt input_prompt">In&nbsp;[438]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># MASS</span>
@@ -14380,6 +14438,24 @@ After event selection significance:  1.757253376125739
 <span class="n">histo</span><span class="p">(</span><span class="n">newbg</span><span class="p">,</span> <span class="n">newsig</span><span class="p">,</span> <span class="n">newlow</span><span class="p">,</span> <span class="s2">&quot;Observed Low Mass Luminosity w/ Expected Signal and Background (Optimal event selection)&quot;</span><span class="p">,</span> <span class="s2">&quot;mass&quot;</span><span class="p">)</span>
 
 <span class="c1"># observed significance</span>
+<span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">qcd</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">lowtotal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">newlow</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="c1"># expected yield</span>
+<span class="n">exp_yield</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">qcd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected yield:       &quot;</span><span class="p">,</span> <span class="n">exp_yield</span><span class="p">)</span>
+
+<span class="c1"># observed yield</span>
+<span class="n">percentbg</span> <span class="o">=</span> <span class="n">qcd</span> <span class="o">/</span> <span class="n">total</span>
+<span class="n">percentsig</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">total</span>
+
+<span class="n">lumibg</span> <span class="o">=</span> <span class="n">percentbg</span> <span class="o">*</span> <span class="n">lowtotal</span>
+<span class="n">lumisig</span> <span class="o">=</span> <span class="n">percentsig</span> <span class="o">*</span> <span class="n">lowtotal</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">lumisig</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lumibg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The observed significance:&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14420,13 +14496,25 @@ After event selection significance:  1.757253376125739
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The expected yield:        0.7071067811865475
+The observed significance: 0.01987460691435179
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[226]:</div>
+<div class="prompt input_prompt">In&nbsp;[437]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># t3</span>
@@ -14450,6 +14538,24 @@ After event selection significance:  1.757253376125739
 <span class="n">histo</span><span class="p">(</span><span class="n">newbg</span><span class="p">,</span> <span class="n">newsig</span><span class="p">,</span> <span class="n">newlow</span><span class="p">,</span> <span class="s2">&quot;Observed Low T3 Luminosity w/ Expected Signal and Background (Optimal event selection)&quot;</span><span class="p">,</span> <span class="s2">&quot;t3&quot;</span><span class="p">)</span>
 
 <span class="c1"># observed significance</span>
+<span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">qcd</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">lowtotal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">newlow</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="c1"># expected yield</span>
+<span class="n">exp_yield</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">qcd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected yield:       &quot;</span><span class="p">,</span> <span class="n">exp_yield</span><span class="p">)</span>
+
+<span class="c1"># observed yield</span>
+<span class="n">percentbg</span> <span class="o">=</span> <span class="n">qcd</span> <span class="o">/</span> <span class="n">total</span>
+<span class="n">percentsig</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">total</span>
+
+<span class="n">lumibg</span> <span class="o">=</span> <span class="n">percentbg</span> <span class="o">*</span> <span class="n">lowtotal</span>
+<span class="n">lumisig</span> <span class="o">=</span> <span class="n">percentsig</span> <span class="o">*</span> <span class="n">lowtotal</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">lumisig</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lumibg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The observed significance:&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14490,13 +14596,25 @@ After event selection significance:  1.757253376125739
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The expected yield:        0.7071067811865475
+The observed significance: 0.023664319132398467
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[227]:</div>
+<div class="prompt input_prompt">In&nbsp;[432]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># t21</span>
@@ -14520,6 +14638,24 @@ After event selection significance:  1.757253376125739
 <span class="n">histo</span><span class="p">(</span><span class="n">newbg</span><span class="p">,</span> <span class="n">newsig</span><span class="p">,</span> <span class="n">newlow</span><span class="p">,</span> <span class="s2">&quot;Observed Low T21 Luminosity w/ Expected Signal and Background (Optimal event selection)&quot;</span><span class="p">,</span> <span class="s2">&quot;t21&quot;</span><span class="p">)</span>
 
 <span class="c1"># observed significance</span>
+<span class="n">signal</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">qcd</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">hightotal</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">newhigh</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="c1"># expected yield</span>
+<span class="n">exp_yield</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">qcd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected yield:       &quot;</span><span class="p">,</span> <span class="n">exp_yield</span><span class="p">)</span>
+
+<span class="c1"># observed yield</span>
+<span class="n">percentbg</span> <span class="o">=</span> <span class="n">qcd</span> <span class="o">/</span> <span class="n">total</span>
+<span class="n">percentsig</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">/</span> <span class="n">total</span>
+
+<span class="n">lumibg</span> <span class="o">=</span> <span class="n">percentbg</span> <span class="o">*</span> <span class="n">hightotal</span>
+<span class="n">lumisig</span> <span class="o">=</span> <span class="n">percentsig</span> <span class="o">*</span> <span class="n">hightotal</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">lumisig</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lumibg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The observed significance:&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14560,6 +14696,18 @@ After event selection significance:  1.757253376125739
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The expected yield:        0.7071067811865475
+The observed significance: 0.09311283477587823
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14567,9 +14715,17 @@ After event selection significance:  1.757253376125739
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Similar to the high luminosity dataset, in all three features of the low luminosity dataset, the observed significance is lower than the expected yield. This is because the high luminosity mass data does not closely follow the signal data and the background data. This difference results in a much lower significance; however, the significances should be the same.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>3)95% Confidence Level of signal yields</p>
 <ul>
-<li>In the low luminosity data, the observed significance is less than 5 σ . We will calculate the 95% confidence level upper limit of signal yield.</li>
+<li>In the low luminosity data, the observed significance is less than 5$σ$. We will calculate the 95% confidence level upper limit of signal yield.</li>
 <li>Evaluate the expected 95% confidence level upper limit</li>
 <li>Evaluate the observed 95% confidence level upper limit</li>
 <li>Compare expectation to observation. Comment on your finding.</li>
@@ -14577,6 +14733,118 @@ After event selection significance:  1.757253376125739
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[420]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#prob5sig = 1/3.5e6</span>
+<span class="n">prob5sig</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># expected upper</span>
+<span class="c1"># expected N_higgs = 100</span>
+<span class="n">expsig</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">prob5sig</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The expected upper 5σ sensitivity threshold is&quot;</span><span class="p">,</span> <span class="n">expsig</span><span class="p">)</span>
+
+<span class="c1"># observed upper</span>
+<span class="c1"># observed N_higgs = 40</span>
+<span class="n">obshiggs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">low</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">signal</span> <span class="o">/</span> <span class="n">total</span><span class="p">)</span>
+<span class="n">obssig</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">prob5sig</span><span class="p">,</span> <span class="n">obshiggs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The observed upper 5σ sensitivity threshold is&quot;</span><span class="p">,</span> <span class="n">obssig</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The expected upper 5σ sensitivity threshold is 154.0
+The observed upper 5σ sensitivity threshold is 18.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The expected 5σ sensitivity limit is less than the observed 5σ sensitivity limit. This makes sense because the mean of the epxected significance is greater than that of the observed significance.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>4)Bonus:</p>
+<ul>
+<li>Evalute the 1$σ$ uncertainty of the expected 95% confidence level upper limit.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[414]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#prob of 1 sigma</span>
+<span class="n">prob1sig</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># expected upper</span>
+<span class="n">expsig</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">prob1sig</span><span class="p">,</span> <span class="n">obshiggs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The 1σ uncertainty of the expected 95</span><span class="si">% c</span><span class="s2">onfidence level upper limit is&quot;</span><span class="p">,</span> <span class="n">expsig</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The 1σ uncertainty of the expected 95% confidence level upper limit is 6.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
